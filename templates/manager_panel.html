@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manager Panel</title>
+<style>
+  body { font-family: Arial; background:#f9f9f9; margin:0; padding:0; }
+  header { background:#28a745; color:white; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; }
+  header h1 { margin:0; font-size:20px; }
+  header a { text-decoration:none; color:white; background:#dc3545; padding:8px 15px; border-radius:6px; }
+  header a:hover { background:#c82333; }
+  .container { display:flex; justify-content:center; align-items:flex-start; padding:40px 20px; gap:40px; }
+  .content { background:white; padding:30px; border-radius:12px; box-shadow:0 0 15px #aaa; width:350px; text-align:center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Manager Panel - Welcome, {{ username }}!</h1>
+  <a href="{{ url_for('logout') }}">Logout</a>
+</header>
+
+<div class="container">
+  <div class="content">
+    <h3>Manager Dashboard</h3>
+    <p>This is a separate dashboard for the manager.</p>
+    <p>Here you can show manager-specific data or actions.</p>
+  </div>
+</div>
+
+</body>
+</html>
